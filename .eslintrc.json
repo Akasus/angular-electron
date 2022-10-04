@@ -3,7 +3,8 @@
   "ignorePatterns": [
     "app/**/*", // ignore nodeJs files
     "dist/**/*",
-    "release/**/*"
+    "release/**/*",
+    "node_modules/**/*"
   ],
   "overrides": [
     {
@@ -45,6 +46,7 @@
         "plugin:@angular-eslint/template/recommended"
       ],
       "rules": {
+        "curly" : ["error", "multi"]
       }
     }
   ]

@@ -9,10 +9,14 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowJs": true,
+    "baseUrl": "./src",
     "target": "es2015",
     "typeRoots": [
       "node_modules/@types"
     ],
+    "paths": {
+      "types" : ["../types/"]
+    },
     "lib": [
       "es2017",
       "es2016",
@@ -20,8 +24,9 @@
       "dom"
     ]
   },
+  "include": ["./**/*.d.ts"],
   "exclude": [
-    "node_modules"
+    "node_modules/**/*"
   ],
   "angularCompilerOptions": {
     "strictTemplates": true,

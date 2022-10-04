@@ -1,28 +1,30 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { PageNotFoundComponent } from './shared/components';
+import { RouterModule, Routes } from '@angular/router';
+import { SideMainNavComponent } from './core/components/side-main-nav/side-main-nav.component';
+import { LogComponent } from './features/log/';
 
-import { HomeRoutingModule } from './home/home-routing.module';
-import { DetailRoutingModule } from './detail/detail-routing.module';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    loadChildren: () => import('./features/public/public.module').then(m => m.PublicModule),
   },
   {
-    path: '**',
-    component: PageNotFoundComponent
-  }
+    path: 'log',
+    loadChildren: () => import('./features/log/log.module').then(m => m.LogModule),
+    component: LogComponent,
+  },
+  // {
+  //   path: 'admin',
+  //   children: [
+  //     { path: '', loadChildren: () => import('./views/admin/admin.module').then(m => m.AdminModule) }
+  //   ],
+  //   component: SideMainNavComponent
+  // }
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
-    HomeRoutingModule,
-    DetailRoutingModule
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

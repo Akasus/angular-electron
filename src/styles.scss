@@ -1,24 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
-  margin: 0;
-  padding: 0;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
+
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: justify;
   height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  overflow: hidden;
+  @apply text-gray-200;
+  background-color: black;
+}
+
+
+.draggable {
+  -webkit-app-region: drag;
+}
+
+.mat-toolbar-single-row {
+   height: auto;
+}
+
+.lh-0{
+  line-height: 0;
 }
 
 /* CAN (MUST) BE REMOVED ! Sample Global style */
 .container {
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  background: url(./assets/background.jpg) no-repeat center fixed;
-  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-  background-size: cover; /* version standardisée */
-
+  background-color: #41557b;
+  margin: 0;
+  padding: 0;
+  max-width: 100% !important;
+  max-height: 100% !important;
   .title {
     color: white;
     margin: 0;
@@ -48,3 +73,4 @@ html, body {
   }
 }
 
+/* CAN (MUST) BE REMOVED ! Sample Global style */

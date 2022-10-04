@@ -8,6 +8,7 @@
   "version": "11.1.0",
   "main": "main.js",
   "private": true,
-  "dependencies": {
-  }
+  "files": [
+    "./**/*.ts"
+  ]
 }

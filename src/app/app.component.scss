@@ -1,3 +1,41 @@
 :host {
-  
+
+}
+
+.page-container{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #555;
+}
+.app-head{
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+z-index: 100;
+}
+
+.w-border {
+  border: 4px solid #41557b;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.windowContent {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  background-color: #ffffffaa;
+  -webkit-app-region: no-drag;
 }

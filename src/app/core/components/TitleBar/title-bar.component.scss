@@ -1,0 +1,30 @@
+.titlebar {
+  padding: 0 0 0 0.5rem;
+  user-select: none;
+  z-index: 100;
+  position: relative;
+  -webkit-app-region: drag;
+  margin: 0 0 0 0;
+  .controls {
+    -webkit-app-region: no-drag;
+    user-select: none;
+    height: 100%;
+    @apply flex flex-row justify-center;
+  }
+
+
+
+  .btn {
+    --bs-btn-font-size: 0.8rem;
+    @apply text-gray-300;
+    -webkit-app-region: no-drag;
+  }
+
+  i{
+    @apply px-4;
+  }
+
+
+}
+
+

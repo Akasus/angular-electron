@@ -1,0 +1,29 @@
+
+table{
+  width: 100%;
+}
+
+.mat-header-row,.mat-row{
+  padding: auto;
+  height: 0!important;
+  min-width: none;
+  width: auto;
+}
+
+.mat-column-pos, .mat-column-line {
+  width: 10% !important;
+}
+.mat-column-file {
+  width: 70%!important;
+}
+::ng-deep mat-header-cell{
+  width: 140px;
+  min-width: 140px;
+}
+
+.mat-column-func{
+}
+.mat-table{
+  @apply text-sm;
+
+}
